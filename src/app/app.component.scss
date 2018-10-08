@@ -1,0 +1,15 @@
+puzzle {
+  position: relative;
+  left: 0;
+  top: 0;
+  background: none;
+  transition: left 1s, top 1s;
+}
+
+menu {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: aqua;
+}

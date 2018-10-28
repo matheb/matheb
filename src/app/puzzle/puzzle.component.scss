@@ -1,3 +1,5 @@
+@import '../../assets/colors.scss';
+
 intro, ui-developer, geophysicist {
   position: absolute;
   height: 100vh;
@@ -9,18 +11,17 @@ intro {
   left: 0;
   display: flex;
   justify-content: center;
-  background-color: cyan;
 }
 
 
 ui-developer {
   top: 0vh;
   left: 100vw;
-  background-color: red;
+  z-index: 15;
 }
 
 geophysicist {
   top: 0vh;
   left: 200vw;
-  background-color: purple;
+  z-index: 15;
 }

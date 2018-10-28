@@ -1,6 +1,12 @@
+@import './assets/colors.scss';
+
 * {
     padding: 0;
     margin: 0;
+}
+
+body {
+  background-color: white;
 }
 
 app-root {
@@ -12,3 +18,4 @@ app-root {
     overflow: hidden;
     background: none;
 }
+

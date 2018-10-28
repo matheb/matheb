@@ -8,13 +8,19 @@ import { PositionService } from '../../services/position.service';
   styleUrls: ['./ui-developer.component.scss']
 })
 export class UiDeveloperComponent extends PuzzleComponent implements OnInit {
-
+  actualTab: string;
   constructor(public positionService: PositionService) {
     super(positionService);
+    this.actualTab = 'nokia';
+
   }
 
   ngOnInit() {
-    
+    this.actualTab = 'nokia';
+  }
+
+  changeTab(chosenTab: string) {
+    this.actualTab = chosenTab;
   }
 
 }

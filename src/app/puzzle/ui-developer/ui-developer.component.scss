@@ -1,1 +1,263 @@
+@import '../../../assets/colors.scss';
+@import '../../../assets/size-params.scss';
 
+.container{
+  display: flex;
+  flex-flow: row;
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+
+  .sidebar {
+    padding: 10px;
+    padding-top: $menu-height;
+    background-color: $grey;
+    width: $sidebar-width;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+
+    .gallery-title {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 10px;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+
+      .up-button, .down-button {
+         i {
+           font-size: 24px;
+
+           &:hover {
+             color: $red;
+             cursor: pointer;
+           }
+
+           &:active {
+             color: $greyish;
+           }
+         }
+      }
+
+      img {
+        margin: 10px;
+        width: calc(#{$sidebar-width} - 20px);
+        height: 80px;
+        border: 1px solid $dark-blue;
+      }
+    }
+  }
+
+  .main-content {
+    padding-top: $menu-height;
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-flow: column;
+
+    .word-cloud {
+      height: 100px;
+      border: 1px solid $red;
+      margin-bottom: 20px;
+    }
+
+    .history {
+      display: flex;
+      flex-flow: column;
+      padding: 10px;
+
+      h1 {
+        font-size: 24px;
+        font-family: Arial;
+        font-weight: bold;
+        color: $light-blue;
+        margin-bottom: 20px;
+        text-align: left;
+        padding: 10px;
+        text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+
+      }
+
+      nav {
+
+        div {
+          position: relative;
+          display: inline-block;
+          border: 1px solid $dark-blue;
+          border-bottom: none;
+          border-radius: 5px 5px 0px 0px;
+          padding: 4px;
+          margin: 2px 2px 0px 2px;
+          font-family: 'Julius Sans One', sans-serif;
+          font-weight: bold;
+          z-index: 20;
+          text-shadow: 1px 1px 1px $dark-blue;
+
+          &:hover {
+            color: $light-blue;
+            cursor: pointer;
+          }
+
+          &:active {
+            color: $greyish;
+          }
+        }
+
+        .activeTab {
+          border-bottom: 2px solid white;
+          color: $light-blue;
+          text-shadow: 1px 1px 1px $light-blue;
+        }
+      }
+
+      section {
+        display: flex;
+        flex-flow: row;
+        border: 1px solid $dark-blue;
+        position: relative;
+        top: -2px;
+        overflow: auto;
+        mind-width: 300px;
+        max-height: calc(100vh - #{$menu-height} - 200px);
+
+        span{
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .tech-stack {
+          display: flex;
+          padding: 10px;
+          flex-flow: column;
+
+          .tech-label {
+            background-color: $red;
+            color: white;
+            text-align: right;
+            padding: 5px;
+            font-weight: bold;
+            font-family: 'Julius Sans One', sans-serif;
+            font-size: 14px;
+            -webkit-box-shadow: 10px 10px 160px -10px $grey;
+            -moz-box-shadow: 10px 10px 160px -10px $grey;
+            box-shadow: 10px 10px 160px -10px $grey;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+          }
+
+          p {
+            display: flex;
+            flex-flow: column;
+            font-family: Arial;
+            color: $dark-blue;
+            font-size: 12px;
+            text-align: left;
+            margin-bottom: 10px;
+            justify-content: flex-start;
+
+            em {
+              font-weight: bold;
+              font-style: unset;
+            }
+          }
+        }
+
+        .details {
+          display: flex;
+          flex-flow: column;
+          padding: 10px;
+          max-width: 70%;
+
+          section {
+            display: flex;
+            flex-flow: column;
+            overflow: visible;
+            border: none;
+          }
+
+          .time-milestone {
+            background-color: $light-blue;
+            color: white;
+            text-align: left;
+            padding: 5px;
+            font-weight: bold;
+            font-family: 'Julius Sans One', sans-serif;
+            font-size: 14px;
+            -webkit-box-shadow: 10px 10px 160px -10px $grey;
+            -moz-box-shadow: 10px 10px 160px -10px $grey;
+            box-shadow: 10px 10px 160px -10px $grey;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+
+          }
+
+          .job-title {
+            color: $light-blue;
+            font-size: 18px;
+            font-family: 'Julius Sans One', sans-serif;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding: 5px;
+
+          }
+
+          .company {
+            color: $dark-blue;
+            font-size: 14px;
+            font-family: 'Julius Sans One', sans-serif;
+            font-weight: bold;
+            margin-bottom: 15px;
+          }
+
+          .job-description {
+
+            h4 {
+              color: $dark-blue;
+              font-size: 14px;
+              font-weight: bold;
+              font-family: 'Arial', sans-serif;
+              margin-bottom: 10px;
+            }
+
+            .aim {
+              font-style: italic;
+            }
+
+            .tasks {
+              font-weight: bold;
+            }
+
+            p, ul {
+              font-family: Arial;
+              font-size: 12px;
+              margin-bottom: 15px;
+            }
+
+            ul {
+              li {
+                list-style: none;
+                margin-bottom: 4px;
+                margin-left: 20px;
+
+                &::before {
+                  content: '𐩒';
+                  color: $light-blue;
+                  font-weight: bold;
+                  font-size: 12px;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,20 +1,25 @@
+@import '../../../assets/colors.scss';
+@import '../../../assets/size-params.scss';
+
 nav {
   display: flex;
   flex-flow: row;
-  justify-content: flex-end;
-
+  justify-content: space-between;
+  vertical-align: center;
+  height: $menu-height;
 
   span {
+    display: inline-block;
     background: none;
     padding: 5px 20px;
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
     font-size: 24px;
-    color: aqua;
+    color: $dark-blue;
     cursor: pointer;
 
     &:hover {
-      color: darkblue;
+      color: $light-blue;
       font-style: italic;
     }
 
@@ -22,4 +27,20 @@ nav {
       text-shadow: 0px 5px 20px rgba(150, 150, 150, 1);
     }
   }
+
+  div {
+    display: inline-block;
+    padding: 5px 20px;
+
+    .img {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 1px solid lightslategrey;
+      border-radius: 50%;
+      padding: 0;
+      margin: 5px 20px;
+    }
+  }
+
 }

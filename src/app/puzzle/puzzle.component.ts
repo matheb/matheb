@@ -9,10 +9,12 @@ import { PositionService } from '../services/position.service';
 export class PuzzleComponent implements OnInit {
   posX: number;
   posY: number;
+  actualComponent: string;
 
   constructor(public positionService: PositionService) {
     this.posX = 0;
     this.posY = 0;
+    this.actualComponent = 'intro';
   }
 
   ngOnInit() {

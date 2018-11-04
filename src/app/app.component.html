@@ -1,3 +1,2 @@
 <menu *ngIf="!(positionService.getPosition().x === 0 && positionService.getPosition().y === 0)"></menu>
-<puzzle [ngStyle]="{'left': 'calc('+posX+' * -100vw)'}"></puzzle>
-
+<puzzle [ngStyle]="{'left': 'calc('+posX+' * -100vw)', 'top': 'calc('+posY+' * -100vh)'}"></puzzle>

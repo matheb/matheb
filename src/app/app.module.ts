@@ -10,6 +10,10 @@ import { PuzzleComponent } from './puzzle/puzzle.component';
 
 import { PositionService } from './services/position.service';
 import { MenuComponent } from './common/menu/menu.component';
+import { ImgViewerComponent } from './common/img-viewer/img-viewer.component';
+import { MentorComponent } from './puzzle/mentor/mentor.component';
+import { PilotComponent } from './puzzle/pilot/pilot.component';
+import { TravelerComponent } from './puzzle/traveler/traveler.component';
 
 /* const appRoutes: Routes = [
   { path: '/intro', component: AppComponent },
@@ -33,7 +37,11 @@ import { MenuComponent } from './common/menu/menu.component';
     UiDeveloperComponent,
     PuzzleComponent,
     GeophysicistComponent,
-    MenuComponent
+    MenuComponent,
+    ImgViewerComponent,
+    MentorComponent,
+    PilotComponent,
+    TravelerComponent
   ],
   imports: [
     BrowserModule,

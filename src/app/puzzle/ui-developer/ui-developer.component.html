@@ -2,15 +2,17 @@
   <div class="sidebar">
     <div class="gallery-title">Gallery</div>
     <div class="gallery-container">
-      <div class="up-button"><i class="fas fa-chevron-circle-up"></i></div>
-      <img alt="img1" href="../../../assets/images/img1.png"/>
-      <img alt="img2" href="../../../assets/images/img1.png"/>
-      <img alt="img2" href="../../../assets/images/img1.png"/>
-      <div class="down-button"><i class="fas fa-chevron-circle-down"></i></div>
+      <div class="up-button" (click)="scrollDownGallery()"><i class="fas fa-chevron-circle-up"></i></div>
+      <div id="gallery-slider">
+        <div [ngStyle]="{'top': galleryPosition+'px'}" style="height: galleryNeededHeight+'px'">
+          <img *ngFor="let img of galleryService.getActualGallery()" alt={{img.alt}} src="../../../assets/images/{{img.path}}" (click)="galleryService.activateViewer(); galleryService.setActualImage(galleryService.getActualGallery().indexOf(img))">
+        </div>
+      </div>
+      <div class="down-button" (click)="scrollUpGallery()"><i class="fas fa-chevron-circle-down"></i></div>
     </div>
   </div>
   <article class="main-content">
-    <div class="word-cloud"></div>
+    <!-- <div class="word-cloud"></div> -->
     <div class="history">
       <h1>Work Experience</h1>
       <nav>
@@ -71,4 +73,9 @@
       </section>
     </div>
   </article>
+
+  <img-viewer *ngIf="galleryService.getViewerStatus()"></img-viewer>
+<!--     [ngStyle]="{'opacity': galleryService.getViewerStatus() ? '1' : '0',
+                'z-index': galleryService.getViewerStatus() ? '30' : '0'}">
+  </img-viewer> -->
 </div>

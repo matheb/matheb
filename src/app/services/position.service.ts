@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PositionService {
   public position: BehaviorSubject<PuzzlePosition>;
+  public actualComponent: BehaviorSubject<string>;
   private puzzle: any = {
     intro: { x: 0, y: 0 },
     developer: { x: 1, y: 0 },
@@ -18,10 +19,12 @@ export class PositionService {
 
   constructor() {
     this.position = new BehaviorSubject({ x: 0, y: 0 });
+    this.actualComponent = new BehaviorSubject('intro');
   }
 
   public setPosition(component: string) {
     this.position.next(this.puzzle[component]);
+    this.actualComponent.next(component);
   }
 
   public getPosition(): PuzzlePosition {

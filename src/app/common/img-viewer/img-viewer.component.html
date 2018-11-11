@@ -1,7 +1,7 @@
 <div class="overlay" (click)="galleryService.deactivateViewer()">
 </div>
 <div class="viewer-container" (mouseover)="setInfoActive()" (mouseout)="setInfoInActive()">
-  <img src="../../../assets/images/{{galleryService.getActualGallery()[galleryService.getActualImage()].path}}"/>
+  <img src="./assets/images/{{galleryService.getActualGallery()[galleryService.getActualImage()].path}}"/>
   <div class="img-container">
     <span class="back" (click)="galleryService.setPreviousImage()"><i class="fas fa-angle-left"></i></span>
     <span class="next" (click)="galleryService.setNextImage()"><i class="fas fa-angle-right"></i></span>

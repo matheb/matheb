@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PuzzleComponent} from '../../puzzle/puzzle.component';
 import {PositionService} from '../../services/position.service';
+import { GalleryService } from '../../services/gallery.service';
 
 @Component({
   selector: 'menu',
@@ -10,7 +11,7 @@ import {PositionService} from '../../services/position.service';
 export class MenuComponent extends PuzzleComponent implements OnInit {
   actualComponent: string;
 
-  constructor(positionService: PositionService) {
+  constructor(positionService: PositionService, public galleryService: GalleryService) {
     super(positionService);
     this.actualComponent = 'intro';
   }
@@ -20,6 +21,7 @@ export class MenuComponent extends PuzzleComponent implements OnInit {
   }
 
   changeComponent(component: string) {
+    this.galleryService.deactivateViewer();
     this.actualComponent = component;
   }
 

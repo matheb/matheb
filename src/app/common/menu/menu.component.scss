@@ -35,13 +35,14 @@ nav {
     .img {
       display: inline-block;
       position: absolute;
-      width: 24px;
-      height: 24px;
+      width: 36px;
+      height: 40px;
       border: 1px solid lightslategrey;
       border-radius: 50%;
       padding: 0;
       margin: 5px 20px;
-      background-image: url('../../../assets/images/DSC_0003.jpg');
+      background-image: url('../../../assets/images/DSC_0003_small.jpg');
+      background-size: 36px;
     }
 
     .hey {

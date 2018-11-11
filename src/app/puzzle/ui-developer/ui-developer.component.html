@@ -5,7 +5,7 @@
       <div class="up-button" (click)="scrollDownGallery()"><i class="fas fa-chevron-circle-up"></i></div>
       <div id="gallery-slider">
         <div [ngStyle]="{'top': galleryPosition+'px'}" style="height: galleryNeededHeight+'px'">
-          <img *ngFor="let img of galleryService.getActualGallery()" alt={{img.alt}} src="../../../assets/images/{{img.path}}" (click)="galleryService.activateViewer(); galleryService.setActualImage(galleryService.getActualGallery().indexOf(img))">
+          <img *ngFor="let img of galleryService.getActualGallery()" alt={{img.alt}} src="./assets/images/{{img.path}}" (click)="galleryService.activateViewer(); galleryService.setActualImage(galleryService.getActualGallery().indexOf(img))">
         </div>
       </div>
       <div class="down-button" (click)="scrollUpGallery()"><i class="fas fa-chevron-circle-down"></i></div>
@@ -36,10 +36,10 @@
         </span>
         <span class="tech-stack">
           <span class="tech-label">Technologies & Tools</span>
-          <p>Angular 5, Typescript, NodeJS, REST, MongoDB</p>
-          <p><em>Tools for coding:</em><br><span>Git, GitLab, TortoisGit, i18n</span></p>
-          <p><em>General tools:</em><br><span>Jira, Confluence, Microsoft Teams</span></p>
-          <p><em>Methodology:</em><br><span>Scrum, Continous delivery</span></p>
+          <p><span>Angular5</span><span>Typescript</span><span>NodeJS</span><span>REST</span><span>MongoDB</span></p>
+          <p><span>Git</span><span>GitLab</span><span>TortoisGit</span><span>i18n</span></p>
+          <p><span>Jira</span><span>Confluence</span><span>Microsoft teams</span></p>
+          <p><span>Scrum</span><span>Continous delivery</span></p>
         </span>
       </section>
       <section class="experience" [ngStyle]="{'display': actualTab === 'greenfox' ? 'flex' : 'none'}">
@@ -57,7 +57,7 @@
             </ul>
             <p class="tasks">My tasks as a developer</p>
             <ul>
-              <li>Leading a Srum team of 5 students</li>
+              <li>Leading a Scrum team of 5 students</li>
               <li>Taking part in development & testing of an Angular5 based application, which enables to handle student proﬁles, and school-related events easier</li>
               <li>Taking part in development of a platform independent CLI application, written in Python, which can test the student's solutions of workshop exercises</li>
             </ul>
@@ -65,10 +65,11 @@
         </span>
         <span class="tech-stack">
           <span class="tech-label">Technologies & Tools</span>
-          <p>Python, Javascript, TypeScript, AngularJS, Angular2+, CSS, Sass, NodeJS, MySQL, Karma/Jasmine, Java</p>
-          <p><em>Tools for coding:</em><br><span>Git, GitHub, Webpack, Glitch</span></p>
-          <p><em>General tools:</em><br><span>Asana, Trello, Slack</span></p>
-          <p><em>Methodology:</em><br><span>Holacracy, Scrum</span></p>
+          <p><span>Python</span><span>Javascript</span><span>TypeScript</span><span>AngularJS</span><span>Angular2+</span></p>
+          <p><span>CSS</span><span>Sass</span><span>NodeJS</span><span>MySQL</span><span>Karma/Jasmine</span><span>Java</span></p>
+          <p><span>Git</span><span>GitHub</span><span>Webpack</span><span>Glitch</span></p>
+          <p><span>Asana</span><span>Trello</span><span>Slack</span></p>
+          <p><span>Holacracy</span><span>Scrum</span></p>
         </span>
       </section>
     </div>

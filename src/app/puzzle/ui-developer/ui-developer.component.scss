@@ -163,8 +163,10 @@ $scroll-button-height: 24px;
 
         .tech-stack {
           display: flex;
-          padding: 10px;
           flex-flow: column;
+          justify-content: flex-start;
+          padding: 10px;
+          box-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 
           .tech-label {
             background-color: $red;
@@ -183,17 +185,18 @@ $scroll-button-height: 24px;
 
           p {
             display: flex;
-            flex-flow: column;
-            font-family: Arial;
             color: $dark-blue;
             font-size: 12px;
             text-align: left;
             margin-bottom: 10px;
             justify-content: flex-start;
 
-            em {
-              font-weight: bold;
-              font-style: unset;
+            span {
+              background-color: $greyish;
+              margin-right: 5px;
+              padding: 5px;
+              font-family: 'Julius Sans One', sans-serif;
+              border-radius: 2px;
             }
           }
         }
@@ -203,7 +206,7 @@ $scroll-button-height: 24px;
           flex-flow: column;
           padding: 10px;
           max-width: 70%;
-          box-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+          /* box-shadow: 1px 1px 1px rgba(150, 150, 150, 1); */
 
           section {
             display: flex;
